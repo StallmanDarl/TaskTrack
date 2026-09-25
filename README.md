@@ -21,6 +21,10 @@ TaskTrack is a simple Python task-management program that allows users to create
 - `tasks.txt` — Stores the current tasks so they can be loaded when the program is started again.
 - `.gitignore` — Lists files and folders that Git should ignore when tracking the project.
 
+## Version Control
+
+TaskTrack uses Git for local version control and GitHub as the remote repository. Changes are saved locally by creating a commit, which records a version of the project. A push sends local commits to the GitHub repository so they can be backed up and shared. A pull retrieves the latest changes from GitHub and updates the local project.
+
 ## Running the Program
 
 Open a terminal or command prompt and navigate to the folder containing the TaskTrack project.
