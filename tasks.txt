@@ -1,6 +1,3 @@
-Complete ICA04
-Review GitHub commands
-Update the TaskTrack README
-Test persistent storage
-Prepare for exam
-Complete testing
+Complete Testing
+Commit Changes
+Update README
