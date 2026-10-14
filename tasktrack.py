@@ -62,6 +62,18 @@ def save_tasks(tasks, filename):
             # Write each task followed by a newline character.
             file.write(task + "\n")
 
+def remove_task_by_number(tasks, task_number):
+    """Remove a task by its displayed number and return the removed task.
+
+    Return None when the task number is outside the valid range.
+    """
+    # Validate the task number.
+    if task_number <= 0 or task_number > len(tasks):
+        return None
+
+    # Remove and return the selected task.
+    return tasks.pop(task_number - 1)
+
 def remove_task(tasks):
     """Prompt the user to select and remove a task.
 
@@ -81,13 +93,13 @@ def remove_task(tasks):
 
     task_number = int(selection)
 
+    # Remove the task using the helper function.
+    removed_task = remove_task_by_number(tasks, task_number)
+
     # Reject numbers outside the valid task range.
-    if task_number < 1 or task_number > len(tasks):
+    if removed_task is None:
         print("That task number does not exist.")
         return False
-
-    # Remove the selected task from the list.
-    removed_task = tasks.pop(task_number - 1)
 
     # Display the task that was removed.
     print(f"Removed task: {removed_task}")
